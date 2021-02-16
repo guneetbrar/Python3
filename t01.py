@@ -5,36 +5,39 @@
 Author:  Guneet Singh
 ID:      211605090
 Email:   sing0509@mylaurier.ca
-__updated__ = "2021-01-23"
+__updated__ = "2021-02-06"
 -------------------------------------------------------
 """
 # Imports
 
 # Constants
+PROFIT_PERCENTAGE = 0.17
 
 def func():
     """
     -------------------------------------------------------
-    description
-    Use: 
+    Enter the amount of total sales,and then display the 
+    profit that will be made from that amount
+    Use: profit = total_sales * PROFIT_PERCENTAGE
     -------------------------------------------------------
     Parameters:
-        name - description (type)
+        total_sales - amount of total sales (float > 0)
     Returns:
-         name - description (type)
+         profit - total amount of profit calculated (float > 0)
     ------------------------------------------------------
     """
-# Print statement 1
-print('The book title is, "Learn Python in 21 Days".')
+# Input
+total_sales = float(input('Enter the amount of total sales: $'))
 
-# Print statement 2
-print("What's mine is mine, and what's yours is mine.")
+# Processing
+profit = total_sales * PROFIT_PERCENTAGE
 
-# Print statement 3
-print('''"You have enemies? Good. That means you've stood up for something, sometime in your life." Winston Churchill''')
+# Print
+print('Projected Profit Report')
+print('--------------------------')
+print('Total sales: ${:.2f}'.format(total_sales))
+print('Annual profit: %17')
+print('--------------------------')
+print('Profit: ${:.2f}'.format(profit))
 
-# Print statement 4
-print('''Three things cannot be long hidden:
-the sun,
-the moon,
-and the truth''')
+

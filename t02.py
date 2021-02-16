@@ -5,7 +5,7 @@
 Author:  Guneet Singh
 ID:      211605090
 Email:   sing0509@mylaurier.ca
-__updated__ = "2021-01-23"
+__updated__ = "2021-02-06"
 -------------------------------------------------------
 """
 # Imports
@@ -15,18 +15,25 @@ __updated__ = "2021-01-23"
 def func():
     """
     -------------------------------------------------------
-    description
-    Use: 
+    Ask the user to enter a positive two-digit integer num_2d.
+    The program outputs the sum of the two digits
+    Use: num_one = num_2d // 10
+         num_two = num_2d % 10
+         total = num_one + num_two
     -------------------------------------------------------
     Parameters:
-        name - description (type)
+        num_2d - Two digit positive integer (int)
     Returns:
-         name - description (type)
+         total - sum of the first and the second digit (int)
     ------------------------------------------------------
     """
 # Input
-name = input('What is your name?')
-eye_colour = input('What is your eye colour?')
+num_2d = int(input('Enter a positive two-digit integer: '))
 
-# Output
-print('My name is {} and I have {} eyes'.format(name, eye_colour))
+# Processing
+num_one = num_2d // 10
+num_two = num_2d % 10
+total = num_one + num_two
+
+# Print
+print('The total is: {}'.format(total))

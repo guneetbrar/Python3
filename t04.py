@@ -5,7 +5,7 @@
 Author:  Guneet Singh
 ID:      211605090
 Email:   sing0509@mylaurier.ca
-__updated__ = "2021-01-23"
+__updated__ = "2021-02-06"
 -------------------------------------------------------
 """
 # Imports
@@ -15,21 +15,27 @@ __updated__ = "2021-01-23"
 def func():
     """
     -------------------------------------------------------
-    description
-    Use: 
+    Divide the number of flyers evenly among volunteers to 
+    advertise for a charity event
+    Use: flyers_given = flyers // volunteers
+         flyers_left = flyers % volunteers
     -------------------------------------------------------
     Parameters:
-        name - description (type)
+        flyers - number of flyers to be distributed (int)
+        volunteers - number of volunteers (int)
     Returns:
-         name - description (type)
+         flyers_given - flyers to be distributed (int)
+         flyers_left - flyers left (int)
     ------------------------------------------------------
     """
-
 # Input
-height_inches = int(input('Enter the height in inches:'))
+flyers = int(input('Number of flyers: '))
+volunteers = int(input('Number of volunteers: '))
 
-# Constant
-HEIGHT_METERS = float(height_inches * 0.025)
+# Processing
+flyers_given = flyers // volunteers
+flyers_left = flyers % volunteers
 
-# Output
-print('The equivalent height in meters is {:.2f}'.format(HEIGHT_METERS))
+# Print
+print('Each volunteer will receive {} flyer/s'.format(flyers_given))
+print('flyers that will not be distributed: {}'.format(flyers_left))

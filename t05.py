@@ -5,7 +5,7 @@
 Author:  Guneet Singh
 ID:      211605090
 Email:   sing0509@mylaurier.ca
-__updated__ = "2021-01-23"
+__updated__ = "2021-02-06"
 -------------------------------------------------------
 """
 # Imports
@@ -15,24 +15,25 @@ __updated__ = "2021-01-23"
 def func():
     """
     -------------------------------------------------------
-    description
-    Use: 
+    Program outputs the weighted exam mark 
+    (as a percentage value) of midterm-mark and final exam
+    marks
+    Use: exam_portion = ((0.2 * midterm_test_mark) + 
+        (0.4 * final_test_mark)) / (0.2 + 0.4)
     -------------------------------------------------------
     Parameters:
-        name - description (type)
+        midterm_test_mark - input mid term marks (int)
+        final_test_mark - input final term marks (int)
     Returns:
-         name - description (type)
+         exma_portion - outputs the weighted exam average (float)
     ------------------------------------------------------
     """
-
 # Input
-principal = int(input('Principal: '))
-interest = float(input('Interest (decimal): '))
-years = int(input('Number of years: '))
-compound_interest = int(input('Compound interest per year: '))
+midterm_test_mark = int(input('Midterm mark (%): '))
+final_test_mark = int(input('Final mark (%): '))
 
 # Processing
-balance = principal * (1.0 + (interest/compound_interest))**(compound_interest*years)
+exam_portion = ((0.2 * midterm_test_mark) + (0.4 * final_test_mark)) / (0.2 + 0.4)
 
-#Output
-print('Balance: ${:.2f}'.format(balance))
+# Print 
+print('Your weighted exam average is: {:.1f} %. The passing mark of the weighted exam average is 50%'.format(exam_portion))
